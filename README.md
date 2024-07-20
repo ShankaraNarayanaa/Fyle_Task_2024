@@ -72,7 +72,7 @@ Step 3: Styling The Component With Tailwind CSS
 3. Application Testing -
 
 Step 1: Component-Level Test Suites 
-        1. app-heading
+        1. app-heading -
            Test Suites -
               1. should create component.
               2. should display the image.
@@ -109,10 +109,12 @@ Step 2: App Level Test Suites
 
 4. Deploying The Application To Netlify -
 
-Step 1: Build the Application - ng build --prod
-Step 2: Deploy to Netlify
-            1. Create a new site on Netlify.
-            2. Link your GitHub repository.
-            3. Set the build command to ng build --prod.
-            4. Set the publish directory to dist/your-project-name.
-            5. Deploy the site.
+    Step 1: Build the Application - ng build --prod.
+    Step 2: Deploy to Netlify.
+                1. Create a new site on Netlify.
+                2. Link your GitHub repository.
+                3. Set the build command to ng build --prod.
+                4. Set the publish directory to dist/your-project-name.
+                5. Deploy the site.
+
+    Step 3: Deployed Site - https://fyle-task-2024.netlify.app/ (User can access the application with this link).
