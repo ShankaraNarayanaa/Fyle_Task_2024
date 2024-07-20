@@ -101,7 +101,8 @@ Step 1: Component-Level Test Suites -
               1. should create.
               2. should display records based on search input field with workout type set to All.
 
-Step 2: App Level Test Suites
+Step 2: App Level Test Suites -
+        
         1. AppComponent -
            Test Suites -
              1. should render title.
