@@ -111,8 +111,8 @@ Step 2: App Level Test Suites -
 
 4. Deploying The Application To Netlify -
 
-    Step 1: Build the Application - 
-                ng build --prod.
+Step 1: Build the Application - 
+                1. ng build --prod.
 
 Step 2: Deploy to Netlify -
 
