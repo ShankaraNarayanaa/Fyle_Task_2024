@@ -111,8 +111,8 @@ Step 2: App Level Test Suites -
 
 4. Deploying The Application To Netlify -
 
-    Step 1: Build the Application - ng build --prod.
-    Step 2: Deploy to Netlify.
+Step 1: Build the Application - ng build --prod.
+Step 2: Deploy to Netlify.
                 1. Create a new site on Netlify.
                 2. Link your GitHub repository.
                 3. Set the build command to ng build --prod.
