@@ -1,0 +1,12 @@
+<div class="flex flex-col justify-start items-center md:flex-row md:justify-evenly md:items-start p-2 space-y-2 md:space-y-0 md:space-x-2">
+    <input [(ngModel)]="username" name="username" class="w-5/6 mb-2 p-2 border-4 border-blue-100 rounded md:w-1/4 mb-2 p-2 border-4 border-blue-100 rounded" type="text" placeholder="UserName" required>
+    <select [(ngModel)]="workoutType" name="workoutType" class="w-5/6 mb-2 p-2 border-4 border-blue-100 rounded md:w-1/4 mb-2 p-2 border-4 border-blue-100 rounded">
+        <option class="p-2 m-2" value="">Select Activity</option>
+        <option value="cycling">Cycling</option>
+        <option value="swimming">Swimming</option>
+        <option value="yoga">Yoga</option>
+        <option value="running">Running</option>
+        <option value="jogging">Jogging</option>
+    </select>
+    <input [(ngModel)]="workoutMinutes" name="workoutMinutes" class="w-5/6 mb-2 p-2 border-4 border-blue-100 rounded md:w-1/4 mb-2 p-2 border-4 border-blue-100 rounded" type="number" placeholder="Workout Minutes" min="0" max="1000" required>
+</div>

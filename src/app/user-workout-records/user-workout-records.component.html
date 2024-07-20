@@ -1,0 +1,50 @@
+<div class="flex flex-row items-center md:flex-row justify-evenly bg-green-100">
+    <input [(ngModel)]="searchQuery" (ngModelChange)="onSearchQueryChange()" class="w-1/2 p-2 m-2 border-4 border-blue-100 rounded md:w-1/4" type="search" placeholder="Search...">
+    <select [(ngModel)]="selectedWorkoutType" (ngModelChange)="onWorkoutTypeChange()" class="w-1/2 p-2 m-2 border-4 border-blue-100 rounded md:w-1/4">
+        <option class="p-2 m-2" value="all">All</option>
+        <option value="cycling">Cycling</option>
+        <option value="swimming">Swimming</option>
+        <option value="yoga">Yoga</option>
+        <option value="running">Running</option>
+        <option value="jogging">Jogging</option>
+    </select>
+</div>
+
+<div class="flex flex-col justify-center overflow-auto md:flex-row justify-evenly mt-2 overflow-auto">
+    <div class="w-full md:w-5/6 h-60 overflow-y-auto border-4 border-green-100 rounded shadow-inner shadow-2xl">
+      <table class="min-w-full border-collapse">
+        <thead>
+          <tr>
+            <th class="border-r-2 border-green-100 p-3 tracking-widest">NAME</th>
+            <th class="border-r-2 border-green-100 p-3 tracking-widest">WORKOUTS</th>
+            <th class="border-r-2 border-green-100 p-3 tracking-widest">NUMBER OF WORKOUTS</th>
+            <th class="border-r-2 border-green-100 p-3 tracking-widest">TOTAL WORKOUT MINUTES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let workout of paginatedWorkouts">
+            <td class="text-center border-2 border-green-100 p-2 tracking-widest">
+              <a href="#" class="text-blue-500 hover:text-blue-700">{{ workout.username }}</a>
+            </td>
+            <td class="text-center border-2 border-green-100 p-2 tracking-widest">{{ workout.workouts }}</td>
+            <td class="text-center border-2 border-green-100 p-2 tracking-widest">{{ workout.numberOfWorkouts }}</td>
+            <td class="text-center border-2 border-green-100 p-2 tracking-widest">{{ workout.totalWorkoutMinutes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    
+<div class="pagination-controls flex flex-col items-center justify-center md:flex-row justify-center items-center p-2">
+    <div class="border-4 border-green-100 bg-green-100 p-3 rounded flex flex-col md:flex-row items-center">
+      <label for="pageSize" class="tracking-widest font-bold mb-2 md:mb-0 md:mr-2">Records Per Page:</label>
+      <select class="p-1 m-1 mb-2 md:mb-0 md:mr-2" id="pageSize" [(ngModel)]="pageSize" (change)="onPageSizeChange($event)">
+        <option *ngFor="let size of pageSizeOptions" [value]="size">{{ size }}</option>
+      </select>
+      <button (click)="previousPage()" [disabled]="currentPage === 1" class="p-2 tracking-widest font-bold mb-2 md:mb-0 md:mr-2">Previous</button>
+      <span class="tracking-widest border-2 border-black rounded p-1 bg-white mb-2 md:mb-0 md:mr-2">Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="p-2 tracking-widest font-bold">Next</button>
+    </div>
+</div>
+
+
