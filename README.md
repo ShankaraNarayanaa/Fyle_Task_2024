@@ -71,7 +71,8 @@ Step 3: Styling The Component With Tailwind CSS
 
 3. Application Testing -
 
-Step 1: Component-Level Test Suites 
+Step 1: Component-Level Test Suites -
+
         1. app-heading -
            Test Suites -
               1. should create component.
